@@ -95,9 +95,10 @@
 
 
 
-let n1 = 3
+
+let n1 = 5
 let n2 = 1
-let n3 = 5
+let n3 = 3
 
 let primoN = null
 let secondoN = null
@@ -124,7 +125,7 @@ if (n1 >= n2 && n1 >= n3) {
       secondoN = n3
       terzoN = n1
     }
-} else if (n3 > n1 && n3 > n2) {
+} else {
     primoN = n3
     if (n1 > n2) {
       secondoN = n1
@@ -139,6 +140,8 @@ if (n1 >= n2 && n1 >= n3) {
 ret = ret.concat([primoN, secondoN, terzoN])
 
 console.log(ret)
+
+
 
 
 /* ESERCIZIO 8
