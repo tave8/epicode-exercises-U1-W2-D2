@@ -3,23 +3,23 @@
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-let number1 = parseInt(prompt("Inserisci numero intero"));
-let number2 = parseInt(prompt("Inserisci un altro numero intero"));
-let greater = number1;
-if (number2 > greater) {
-  greater = number2;
-}
-alert(`Il numero più grande tra i due è ${greater}`);
+// let number1 = parseInt(prompt("Inserisci numero intero"));
+// let number2 = parseInt(prompt("Inserisci un altro numero intero"));
+// let greater = number1;
+// if (number2 > greater) {
+//   greater = number2;
+// }
+// alert(`Il numero più grande tra i due è ${greater}`);
 
 /* ESERCIZIO 2
   Scrivi un algoritmo che mostri "not equal" in console se un numero intero fornito è diverso da 5.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-let number = parseInt(prompt("Inserisci un numero"));
-if (number !== 5) {
-  console.log("not equal");
-}
+// let number = parseInt(prompt("Inserisci un numero"));
+// if (number !== 5) {
+//   console.log("not equal");
+// }
 
 /* ESERCIZIO 3
   Scrivi un algoritmo che mostri "divisibile per 5" in console se un numero fornito 
@@ -28,11 +28,11 @@ if (number !== 5) {
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-let number3 = parseInt(prompt("Inserisci un numero"));
-let eDivisibilePer5 = number3 % 5 === 0;
-if (eDivisibilePer5) {
-  console.log("divisibile per 5");
-}
+// let number3 = parseInt(prompt("Inserisci un numero"));
+// let eDivisibilePer5 = number3 % 5 === 0;
+// if (eDivisibilePer5) {
+//   console.log("divisibile per 5");
+// }
 
 /* ESERCIZIO 4
   Scrivi un algoritmo per verificare che, dati due numeri interi, il valore di uno di essi sia 8 oppure se la loro addizione/sottrazione sia uguale a 8.
@@ -40,16 +40,16 @@ if (eDivisibilePer5) {
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-let number4 = parseInt(prompt("Inserisci un numero"));
-let number5 = parseInt(prompt("Inserisci un numero"));
-let esisteUnOtto = number4 === 8 || number5 === 8;
-let addizioneUgualeA8 = number4 + number5;
-let sottrazioneUgualeA8 = number4 - number5;
-let addizioneOSottrazioneUgualeA8 = addizioneUgualeA8 || sottrazioneUgualeA8;
-let condizioneFinale = esisteUnOtto || addizioneOSottrazioneUgualeA8;
-if (condizioneFinale) {
-  alert("il valore dei numeri è 8 oppure la loro addizione/sottrazione è uguale a 8");
-}
+// let number4 = parseInt(prompt("Inserisci un numero"));
+// let number5 = parseInt(prompt("Inserisci un numero"));
+// let esisteUnOtto = number4 === 8 || number5 === 8;
+// let addizioneUgualeA8 = number4 + number5;
+// let sottrazioneUgualeA8 = number4 - number5;
+// let addizioneOSottrazioneUgualeA8 = addizioneUgualeA8 || sottrazioneUgualeA8;
+// let condizioneFinale = esisteUnOtto || addizioneOSottrazioneUgualeA8;
+// if (condizioneFinale) {
+//   alert("il valore dei numeri è 8 oppure la loro addizione/sottrazione è uguale a 8");
+// }
 
 /* ESERCIZIO 5
   Stai lavorando su un sito di e-commerce. Stai salvando il saldo totale del carrello dell'utente in una variabile "totalShoppingCart".
@@ -60,11 +60,11 @@ if (condizioneFinale) {
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-let totaleDaPagare = totalShoppingCart;
+// let totaleDaPagare = totalShoppingCart;
 
-if (totalShoppingCart <= 50) {
-  totaleDaPagare += 10;
-}
+// if (totalShoppingCart <= 50) {
+//   totaleDaPagare += 10;
+// }
 
 /* ESERCIZIO 6
   Stai lavorando su un sito di e-commerce. Oggi è il Black Friday e viene applicato il 20% su ogni prodotto.
@@ -74,16 +74,16 @@ if (totalShoppingCart <= 50) {
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-let totaleDaPagare2 = totalShoppingCart;
-let eBlackFriday = true;
+// let totaleDaPagare2 = totalShoppingCart;
+// let eBlackFriday = true;
 
-if (eBlackFriday) {
-  totaleDaPagare2 -= totaleDaPagare2 * 0.2;
-}
+// if (eBlackFriday) {
+//   totaleDaPagare2 -= totaleDaPagare2 * 0.2;
+// }
 
-if (totalShoppingCart <= 50) {
-  totaleDaPagare2 += 10;
-}
+// if (totalShoppingCart <= 50) {
+//   totaleDaPagare2 += 10;
+// }
 
 /* ESERCIZIO 7
   Crea tre variabili, e assegna un valore numerico a ciascuna di esse.
@@ -93,41 +93,53 @@ if (totalShoppingCart <= 50) {
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-let n1 = 1;
-let n2 = 3;
-let n3 = 5;
 
-let primoNumero = null;
-let secondoNumero = null;
-let terzoNumero = null;
 
-let listaFinale = [];
+let n1 = 3
+let n2 = 1
+let n3 = 5
 
-if (n1 > n2 && n1 > n3) {
-  primoNumero = n1;
-} else if (n2 > n1 && n2 > n3) {
-  primoNumero = n2;
+let primoN = null
+let secondoN = null
+let terzoN = null
+
+let ret = []
+
+
+if (n1 >= n2 && n1 >= n3) {
+    primoN = n1
+    if (n2 > n3) {
+      secondoN = n2
+      terzoN = n3
+    } else {
+      secondoN = n3
+      terzoN = n2
+    }
+} else if (n2 >= n1 && n2 >= n3) {
+     primoN = n2
+    if (n1 > n3) {
+      secondoN = n1
+      terzoN = n3
+    } else {
+      secondoN = n3
+      terzoN = n1
+    }
 } else if (n3 > n1 && n3 > n2) {
-  primoNumero = n3;
+    primoN = n3
+    if (n1 > n2) {
+      secondoN = n1
+      terzoN = n2
+    } else {
+      secondoN = n2
+      terzoN = n1
+    }
 }
 
-if (n1 <= primoNumero && n1 > n3) {
-  secondoNumero = n1;
-} else if (n2 <= primoNumero && n2 > n3) {
-  secondoNumero = n2;
-} else if (n3 <= primoNumero && n3 > n1) {
-  secondoNumero = n3;
-}
 
-if (n1 <= secondoNumero && n1 > n3) {
-  terzoNumero = n1;
-} else if (n2 <= secondoNumero && n2 > n3) {
-  terzoNumero = n2;
-} else if (n2 <= secondoNumero && n2 > n1) {
-  terzoNumero = n3;
-}
+ret = ret.concat([primoN, secondoN, terzoN])
 
-console.log("risultato", primoNumero, secondoNumero, terzoNumero);
+console.log(ret)
+
 
 /* ESERCIZIO 8
   Crea un algoritmo per verificare che un valore fornito sia un numero oppure no (suggerimento: cerca su un motore di ricerca "typeof").
